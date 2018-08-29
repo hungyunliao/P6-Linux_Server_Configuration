@@ -6,7 +6,6 @@ import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0,"/var/www/catalog/")
-sys.path.insert(0, "/var/www/catalog/catalog/venv")
 
 from catalog import app as application
-application.secret_key = 'Add your secret key'
+application.secret_key = 'catalog_secret_key'

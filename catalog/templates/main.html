@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <style>
+            * {
+                font-size: 1.05em;
+            }
+            h1 {
+                margin: 0px;
+            }
+            h3 {
+                font-weight: bold;
+            }
+            a {
+                color: #FF5A2B;
+            }
+            a:hover {
+                color: #FF0000;
+                text-decoration: none;
+            }
+            
+            .row {
+                margin: auto !important;
+            }
+            
+            i {
+                color: darkgray;
+            }
+        </style>
+<!--		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">-->
+        {% block head %}
+        {% endblock %}
+    </head>
+    <body style="background-color: #C6C6C6;">
+        <div style="background-color: #00117E;">
+            <div class="row" style="width: 80%; padding: 10px 0px; margin: auto;">
+                <div class="col-md-6" style="height: 100%;">
+                    <a href="{{url_for('showLatest')}}" style="color: white;">
+                        <h1>Catalog App</h1>
+                    </a>
+                </div>
+                <div class="col-md-6" style="height: 100%; text-align: right;">
+                    {% if isLoggedIn %}
+                        <button class="btn btn-primary" onclick="window.location.href = '{{ url_for('oauth.logout')}}'">Logout</button>
+                    {% elif hideLogin %}
+            <!--            Intentionally left blank.-->
+                    {% else %}
+                        <button class="btn btn-primary" onclick="window.location.href = '{{url_for('oauth.showLogin')}}'">Login</button>
+                    {% endif %}
+                </div>
+            </div>
+		</div>
+        <div style="margin-top: 20px;">
+            <div style="width: 80%; padding: 10px 0px; margin: auto; background-color: white; border: black 1px solid;">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
