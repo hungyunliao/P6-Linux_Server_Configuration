@@ -20,13 +20,13 @@ from flask import make_response
 import requests
 
 CLIENT_ID = json.loads(
-                open('client_secrets.json', 'r').read()
+                open('/var/www/catalog/catalog/oauth/client_secrets.json', 'r').read()
             )['web']['client_id']
 FB_APP_ID = json.loads(
-        open('fb_client_secrets.json', 'r').read()
+        open('/var/www/catalog/catalog/oauth/fb_client_secrets.json', 'r').read()
     )['web']['app_id']
 FB_APP_SECRET = json.loads(
-        open('fb_client_secrets.json', 'r').read()
+        open('/var/www/catalog/catalog/oauth/fb_client_secrets.json', 'r').read()
     )['web']['app_secret']
 
 engine = create_engine('sqlite:///catalog.db')

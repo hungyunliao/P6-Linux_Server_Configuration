@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/var/www/catalog/catalog')
+
 from functools import wraps
 from models import Base, User, Category, Item
 from flask import (Flask,
