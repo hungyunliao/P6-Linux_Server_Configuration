@@ -78,6 +78,6 @@ class Item(Base):
         }
 
 
-#engine = create_engine('sqlite:////var/www/catalog/catalog/catalog.db')
-engine = create_engine('sqlite:///catalog.db');
+engine = create_engine('sqlite:////var/www/catalog/catalog/catalog.db')
+#engine = create_engine('sqlite:///catalog.db');
 Base.metadata.create_all(engine)

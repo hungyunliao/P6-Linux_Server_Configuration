@@ -29,7 +29,7 @@ FB_APP_SECRET = json.loads(
         open('/var/www/catalog/catalog/oauth/fb_client_secrets.json', 'r').read()
     )['web']['app_secret']
 
-engine = create_engine('sqlite:///catalog.db')
+engine = create_engine('sqlite:////var/www/catalog/catalog/catalog.db')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 

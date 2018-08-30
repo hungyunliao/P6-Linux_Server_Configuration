@@ -9,7 +9,7 @@ from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine, exc
 from flask_httpauth import HTTPBasicAuth
 
-engine = create_engine('sqlite:///catalog.db')
+engine = create_engine('sqlite:////var/www/catalog/catalog/catalog.db')
 Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 auth = HTTPBasicAuth()
