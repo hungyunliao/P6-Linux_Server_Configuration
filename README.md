@@ -1,7 +1,7 @@
 # Item_Catalog
 This is a website that allows users to browse items in different catgories. The items are maintained by admins (users who have been authorized and authenticated by Google OAuth APIs). 
 
-This site is hosted on AmazonLightsail at http://itsawesomeweb.tk/categories (the static ip address 52.35.137.157)
+This site is hosted on AmazonLightsail at http://itsawesomeweb.tk/categories with a static ip address 52.35.137.157
 - Users can add items (title, description, category).
 - An item can only be updated/deleted by the user who created it.
 
