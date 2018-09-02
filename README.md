@@ -27,7 +27,7 @@ This is a website that allows users to browse items in different catgories. The 
 - Switched ssh port from 22 to 2200.
 - Disabled login as `root`.
 - Allowed only Key-based authentication for remote login to the server.
-- Created a ubuntu user `grader` which was granted `sudo` access.
+- Created a ubuntu user `grader` which was granted `sudo` access (a rsa key locates in ~/.ssh/authorized_keys).
 - Turned `WSGIPassAuthorization` on to allow user authentication via Flask `@auth.verify_password`
 
 5. **List of third-party resources used to complete this project**
